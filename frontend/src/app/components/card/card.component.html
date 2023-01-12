@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem">
+  <img src="{{ employee.foto }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ employee.nombreCompleto }}</h5>
+    <p class="card-text">{{ employee.puestoDeTrabajo }}</p>
+    <div>
+      <a
+        [routerLink]="['/employees/show']"
+        [queryParams]="employee"
+        class="btn btn-primary"
+        >Ver</a
+      ><a
+        [routerLink]="['/employees/edit']"
+        [queryParams]="employee"
+        class="btn btn-primary"
+        >Editar</a
+      ><a (click)="delete(employee.id)" class="btn btn-primary">{{
+        employee.estatus ? "Dar de baja" : "Dar de alta"
+      }}</a>
+    </div>
+  </div>
+</div>

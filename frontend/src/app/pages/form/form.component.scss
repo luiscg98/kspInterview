@@ -1,0 +1,117 @@
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+label {
+  font-size: 1em;
+}
+
+button {
+  margin-right: 0.6em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(88, 88, 219);
+}
+
+.alerta {
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(238, 77, 77);
+  color: white;
+}
+
+.formulario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.casilla {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.button {
+  margin-top: 2em;
+  border-radius: 5em;
+  background-color: rgb(0, 125, 252);
+  color: white;
+  padding: 1em;
+}
+
+.casilla input {
+  height: 3em;
+}
+
+.casilla textarea {
+  height: 100px;
+  width: 100%;
+}
+
+.casilla label {
+  margin-bottom: 1em;
+}
+
+.casillaEspecial {
+  display: flex;
+  align-items: center;
+}
+
+.casillaEspecial label {
+  width: 172px;
+}
+
+.casillaEspecial input {
+  width: calc(100% - 172px);
+  height: 30px;
+}
+
+.casillaClave {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.casillaClave label {
+  width: 50px;
+}
+
+.casillaClave input {
+  width: calc(100% - 50px);
+  height: 30px;
+}
+
+.botonesFormulario {
+  margin-top: 1.5em;
+}
+
+.alert-color-red {
+  border: solid 1px red;
+}
+
+@media (max-width: 576px) {
+  .casillaEspecial {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .casillaEspecial input {
+    margin-top: 1em;
+    width: 100%;
+  }
+  .casillaClave {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .casillaClave input {
+    margin-top: 1em;
+    width: 100%;
+  }
+}

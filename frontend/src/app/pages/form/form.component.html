@@ -1,0 +1,115 @@
+<div class="container">
+  <form [formGroup]="form" class="formulario">
+    <div *ngIf="nombreCompletoNoValido" class="alerta">
+      {{ alertNombreCompleto }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Nombre completo</label>
+      <input
+        class="{{ nombreCompletoNoValido ? 'alert-color-red' : '' }}"
+        type="text"
+        formControlName="nombreCompleto"
+      />
+    </div>
+    <div *ngIf="fotoNoValido" class="alerta">{{ alertFoto }}</div>
+    <div class="casilla">
+      <label for="clave">Foto</label>
+      <input
+        class="{{ fotoNoValido ? 'alert-color-red' : '' }}"
+        type="text"
+        formControlName="foto"
+      />
+    </div>
+    <div *ngIf="puestoDeTrabajoNoValido" class="alerta">
+      {{ alertPuestoDeTrabajo }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Puesto de trabajo</label>
+      <input
+        class="{{ puestoDeTrabajoNoValido ? 'alert-color-red' : '' }}"
+        type="text"
+        formControlName="puestoDeTrabajo"
+      />
+    </div>
+    <div *ngIf="salarioNoValido" class="alerta">{{ alertSalario }}</div>
+    <div class="casilla">
+      <label for="clave">Salario</label>
+      <input
+        class="{{ salarioNoValido ? 'alert-color-red' : '' }}"
+        type="number"
+        formControlName="salario"
+      />
+    </div>
+    <div *ngIf="estatusNoValido" class="alerta">{{ alertEstatus }}</div>
+    <div class="casilla">
+      <label for="clave">Estatus</label>
+      <input
+        class="{{ estatusNoValido ? 'alert-color-red' : '' }}"
+        type="text"
+        formControlName="estatus"
+      />
+    </div>
+    <div *ngIf="fechaDeContratacionNoValido" class="alerta">
+      {{ alertFechaDeContratacion }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Fecha de contratación</label>
+      <input
+        class="{{ fechaDeContratacionNoValido ? 'alert-color-red' : '' }}"
+        type="date"
+        formControlName="fechaDeContratacion"
+      />
+    </div>
+    <div *ngIf="nombreCompletoBeneficiarioNoValido" class="alerta">
+      {{ alertNombreCompletoBeneficiario }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Nombre completo beneficiario</label>
+      <input
+        class="{{
+          nombreCompletoBeneficiarioNoValido ? 'alert-color-red' : ''
+        }}"
+        type="datetime"
+        formControlName="nombreCompletoBeneficiario"
+      />
+    </div>
+    <div *ngIf="parentescoBeneficiarioNoValido" class="alerta">
+      {{ alertParentescoBeneficiario }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Parentesco beneficiario</label>
+      <input
+        class="{{ parentescoBeneficiarioNoValido ? 'alert-color-red' : '' }}"
+        type="datetime"
+        formControlName="parentescoBeneficiario"
+      />
+    </div>
+    <div *ngIf="sexoBeneficiarioNoValido" class="alerta">
+      {{ alertSexoBeneficiario }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Sexo beneficiario</label>
+      <input
+        class="{{ sexoBeneficiarioNoValido ? 'alert-color-red' : '' }}"
+        type="string"
+        formControlName="sexoBeneficiario"
+      />
+    </div>
+    <div *ngIf="fechaDeNacimientoBeneficiarioNoValido" class="alerta">
+      {{ alertFechaDeNacimientoBeneficiario }}
+    </div>
+    <div class="casilla">
+      <label for="clave">Fecha de nacimiento beneficiario</label>
+      <input
+        class="{{
+          fechaDeNacimientoBeneficiarioNoValido ? 'alert-color-red' : ''
+        }}"
+        type="date"
+        formControlName="fechaDeNacimientoBeneficiario"
+      />
+    </div>
+    <button class="button" *ngIf="currentRoute[0] != 's'" (click)="save()">
+      {{ textButton }}
+    </button>
+  </form>
+</div>
